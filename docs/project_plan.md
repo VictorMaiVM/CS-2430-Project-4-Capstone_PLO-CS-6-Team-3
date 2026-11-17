@@ -12,43 +12,31 @@ Primary language: Python
 We are building a single-player Monopoly movement simulator (2018 U.S. rules, no money, no property purchases). The simulator tracks how often the player lands on each of the 40 squares under two jail-exit strategies, then compares the results at n = 1,000, 10,000, 100,000, and 1,000,000 turns. Deliverables are the code package (.zip), a 3–6 page team report, and a screencast of 10 minutes or less.
 
 
-=================== 2. Roles (rotated from Project 3) ==========================
-Each member must hold a different role than in Project 3.
-Member
-Project 3 role
-Project 4 role
-___
-___
-Implementation Lead (core code, integration, main branch health)
-___
-___
-Verification Lead (test plan, edge cases, verification evidence)
-___
-___
-Communications Lead (report, README, packaging, screencast coordination)
-Everyone contributes code, writing, and screencast narration regardless of title.
+=================== 2. Roles  ==========================
 
 
 =================== 3. Scope and Decisions =========================
 In scope: movement, dice and doubles, Chance and Community Chest movement effects, Jail and Go to Jail, Get Out of Jail Free cards, landing counts, batch runs, summary output, report, screencast.
 Out of scope: money, auctions, property purchases, rent, trading, multiple players.
 Decisions to record (fill in once the team agrees):
-Question
-Our decision
-Board indexing
-0–39; GO = 0, Jail = 10, Go to Jail = 30
-Landing counted once per turn or once per roll when doubles occur?
+Question                                                            Our decision
+--------------------------------------------------------------------------
+Board indexing                                                      0–39; GO = 0, Jail = 10, Go to Jail = 30
+___
+Landing counted once per turn or 
+         once per roll when doubles occur?
 ___
 Is each turn spent sitting in Jail counted as a landing?
 ___
-Are the 1k / 10k / 100k / 1M results snapshots of one run or separate runs?
+Are the 1k / 10k / 100k / 1M results 
+      snapshots of one run or separate runs?
 ___
 Does Go to Jail (30) ever receive a count?
-No; the final square after effects (Jail, 10) is counted
-Get Out of Jail Free card handling
-Removed from deck while held; returned to the bottom of its deck when used
-Random number source and seeding
 ___
+Get Out of Jail Free card handling
+___
+Random number source and seeding
+
 
 
 ================= 4. Design Overview =============================
