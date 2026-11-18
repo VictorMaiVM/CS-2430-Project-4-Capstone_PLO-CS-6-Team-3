@@ -16,6 +16,9 @@ compares the results at n = 1,000, 10,000, 100,000, and 1,000,000 turns. Deliver
 
 
 =================== 2. Roles  ==========================
+Erich Mundt - Communications Lead
+Victor Mai - Implementation lead
+Dominique Frank - Verification lead
 
 
 =================== 3. Scope and Decisions =========================
