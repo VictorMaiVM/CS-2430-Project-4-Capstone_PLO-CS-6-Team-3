@@ -9,14 +9,18 @@ Primary language: Python
 
 
 ==================== 1. Project Summary =============================
-We are building a single-player Monopoly movement simulator (2018 U.S. rules, no money, no property purchases). The simulator tracks how often the player lands on each of the 40 squares under two jail-exit strategies, then compares the results at n = 1,000, 10,000, 100,000, and 1,000,000 turns. Deliverables are the code package (.zip), a 3–6 page team report, and a screencast of 10 minutes or less.
+We are building a single-player Monopoly movement simulator (2018 U.S. rules, no money, no property purchases). 
+The simulator tracks how often the player lands on each of the 40 squares under two jail-exit strategies, then 
+compares the results at n = 1,000, 10,000, 100,000, and 1,000,000 turns. Deliverables are the code package 
+(.zip), a 3–6 page team report, and a screencast of 10 minutes or less.
 
 
 =================== 2. Roles  ==========================
 
 
 =================== 3. Scope and Decisions =========================
-In scope: movement, dice and doubles, Chance and Community Chest movement effects, Jail and Go to Jail, Get Out of Jail Free cards, landing counts, batch runs, summary output, report, screencast.
+In scope: movement, dice and doubles, Chance and Community Chest movement effects, 
+Jail and Go to Jail, Get Out of Jail Free cards, landing counts, batch runs, summary output, report, screencast.
 Out of scope: money, auctions, property purchases, rent, trading, multiple players.
 Decisions to record (fill in once the team agrees):
 Question                                                            Our decision
@@ -43,10 +47,13 @@ Random number source and seeding
 • Board: list of 40 squares, each with a name and type.
 • Decks: Chance and Community Chest as shuffled lists with a discard pile; reshuffle when empty.
 • Player state: position, in-jail flag, turns spent in jail, Get Out of Jail Free cards held.
-• Turn engine: roll, track consecutive doubles (third double sends to Jail), move, resolve square and cards (including chained effects), count the final square.
-• Jail strategies: Strategy A (leave immediately) and Strategy B (try for doubles up to 3 turns, then pay on the 4th), isolated in one clearly commented function.
+• Turn engine: roll, track consecutive doubles (third double sends to Jail), move, resolve square and 
+    cards (including chained effects), count the final square.
+• Jail strategies: Strategy A (leave immediately) and Strategy B (try for doubles up to 3 turns,
+    then pay on the 4th), isolated in one clearly commented function.
 • Batch runner: 10 simulations per strategy at four values of n, saved to CSV.
 • Summary output: top squares per strategy, A vs. B comparison at n = 1,000,000, anomalies.
+
 Design artifacts for /docs (pick at least 2):
 1.  Scope and decisions (Section 3 of this plan, finalized)
 2.  Pseudocode for the turn engine and jail logic
